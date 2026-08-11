@@ -1,0 +1,16 @@
+🚀 Starting cribbage-game build...
+📝 Creating folder structure...
+✅ Created favicon.ico
+✅ Created icon-192x192.png
+✅ Created icon-512x512.png
+✅ All files created successfully!
+📦 Installing dependencies...
+
+added 26 packages, and audited 27 packages in 18s
+
+5 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+✅ Dependencies installed!
+📦 Creating ZIP file...

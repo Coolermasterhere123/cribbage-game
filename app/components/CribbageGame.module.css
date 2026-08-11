@@ -1,0 +1,346 @@
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gameContainer {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.difficulty {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.boardSection {
+  margin-bottom: 30px;
+}
+
+.gameArea {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cutSection {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+}
+
+.cutSection h3 {
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+.cutDeck {
+  display: flex;
+  justify-content: center;
+}
+
+.deckCard {
+  width: 100px;
+  height: 140px;
+  background: linear-gradient(135deg, #1a1a2e, #2a2a4e);
+  border: 3px solid #f7971e;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.deckCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(247, 151, 30, 0.3);
+}
+
+.deckBack {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.deckLabel {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.cutResult {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  flex-wrap: wrap;
+}
+
+.cutCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+.cutResultText {
+  color: #ffd700;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.handsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hand {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.hand h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 80px;
+}
+
+.cribSection {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 15px;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+}
+
+.cribSection h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.starterCard {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.peggingSection {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 15px;
+  position: relative;
+}
+
+.peggingSection h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.peggingCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  min-height: 50px;
+}
+
+.scoreNotification {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: linear-gradient(135deg, #ffd700, #f7971e);
+  color: #1a1a2e;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  animation: bounceIn 0.5s ease;
+}
+
+.goButtonContainer {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.goButton {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.goButton:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.goButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.gameOverContainer {
+  text-align: center;
+  color: #fff;
+  padding: 40px;
+}
+
+.gameOverContainer h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.finalScores {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.button {
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+  color: #1a1a2e;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.difficultySelector {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.difficultyButton {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.difficultyButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #f7971e;
+}
+
+.debugLog {
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.debugLog summary {
+  color: #ffd700;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.logEntries {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 10px;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.logEntry {
+  color: #88ff88;
+  font-family: monospace;
+  font-size: 0.8rem;
+  padding: 2px 5px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logEntry:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .gameContainer {
+    padding: 15px;
+  }
+  
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .gameOverContainer h2 {
+    font-size: 1.8rem;
+  }
+  
+  .finalScores {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .deckCard {
+    width: 70px;
+    height: 100px;
+  }
+  
+  .deckBack {
+    font-size: 2.5rem;
+  }
+}

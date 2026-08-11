@@ -1,0 +1,66 @@
+.container {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.scores {
+  display: flex;
+  gap: 30px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.label {
+  color: #d4a574;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.value {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  min-width: 30px;
+  text-align: center;
+}
+
+.message {
+  color: #ffd700;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  background: rgba(247, 151, 30, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(247, 151, 30, 0.2);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  
+  .scores {
+    justify-content: center;
+  }
+  
+  .value {
+    font-size: 1.2rem;
+  }
+  
+  .message {
+    font-size: 0.85rem;
+  }
+}
